@@ -103,6 +103,7 @@ body {
  */
 
  .Container {
+    align-items: center;
     min-width: 200px;
     width: max-content;
     display: flex;
@@ -110,9 +111,11 @@ body {
     padding: 16px;
     border-radius: 16px;
     background: #ffffff;
+    position: relative;
+    
 }
 
-.Container h1 {
+.Container > h1 {
     font-size: 22px;
     font-weight: 600;
     margin-bottom: 10px;

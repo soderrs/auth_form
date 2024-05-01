@@ -4,6 +4,6 @@ value?: string;
   styleType: string;
   placeholderValue: string;
   onChange?: (value: string) => void;
-  type?: "email" | "password" | "text";
+  type?: "email" | "password";
 }
 

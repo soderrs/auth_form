@@ -33,7 +33,7 @@ const Input: React.FC<InputProps> = ({
           isFocused || value !== "" ? styles.Active : ""
         }`}
       >
-        {placeholderValue}
+       
       </label>
       <input
         type={type}
@@ -42,6 +42,8 @@ const Input: React.FC<InputProps> = ({
         onFocus={handleFocus}
         onBlur={handleBlur}
         id={id}
+        placeholder={placeholderValue}
+        
         className={`${styles.Input} ${
           isFocused || value !== "" ? styles.ActiveInput : ""
         }`}

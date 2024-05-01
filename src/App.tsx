@@ -77,7 +77,7 @@ export default function RegisterForm() {
           {!isEmailCorrect ? <p>Incorrect email</p> : null}
           <Input
             styleType="Input1"
-            placeholderValue="Your email"
+            placeholderValue="Enter your email..."
             type="email"
             value={email}
             onChange={handleEmailChange}
@@ -85,7 +85,7 @@ export default function RegisterForm() {
           />
           <Input
             styleType="Input1"
-            placeholderValue="Your password"
+            placeholderValue="Enter your password..."
             value={password}
             type="password"
             onChange={handlePasswordChange}
