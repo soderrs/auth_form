@@ -3,17 +3,19 @@ button {
     justify-content: center;
     align-items: center;
     font-family: "DM Sans";
-    border-radius: 4px;
+    border-radius: 5px;
     border: none;
     padding: 6px 12px;
     background: #299efd;
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 500;
-    height: 40px;
+    width: 70px;
+    height: 30px;
     cursor: pointer;
     transition: 0.2s ease;
     border: 2px solid transparent;
     font-family: "Poppins-Regular";
+    margin: 10px;
 }
 
 .Button1:hover {

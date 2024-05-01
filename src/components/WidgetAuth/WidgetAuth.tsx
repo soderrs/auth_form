@@ -2,23 +2,24 @@ import { useState } from "react";
 import AuthForm from "../AuthForm/AuthForm";
 import Input from "../Input/Input";
 import Button from "../Button/Button";
+import styles from "./WidgetAuth.module.css";
+import logo from "../assets/logo.svg";
+
 
 export default function ModalForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  // const [repeatPassword, setRepeatPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
-  const [isEmailCorrect, setIsEmailCorrect] = useState(true); 
+  const [isEmailCorrect, setIsEmailCorrect] = useState(true);
 
-  // const [apiResponse, setApiResponse] = useState({
-  //   data: null,
-  //   loading: false,
-  //   error: null,
-  //   success: false,
-  // });
+  const [apiResponse, setApiResponse] = useState({
+    data: null,
+    loading: false,
+    error: null,
+    success: false,
+  });
 
- 
   const handleEmailChange = (value: string) => {
     setEmail(value);
     if (!value.length) {
@@ -39,8 +40,6 @@ export default function ModalForm() {
   const handlePasswordChange = (value: string) => {
     setPassword(value);
   };
-
-
 
   const handleSubmit = async () => {
     setIsLoading(true);
@@ -68,33 +67,38 @@ export default function ModalForm() {
   };
 
   return (
-    <AuthForm>
-      <h1>Register form</h1>
-      {isLoading ? (
-        <p>Loading...</p>
-      ) : (
-        <>
-          {!isEmailCorrect ? <p>Incorrect email</p> : null}
-          <Input
-            styleType="Input1"
-            placeholderValue="Enter your email..."
-            type="email"
-            value={email}
-            onChange={handleEmailChange}
-            required
-          />
-          <Input
-            styleType="Input1"
-            placeholderValue="Enter your password..."
-            value={password}
-            type="password"
-            onChange={handlePasswordChange}
-            required
-          />
-         
-          <Button styleType="Button1" onClick={handleSubmit} />
-        </>
-      )}
-    </AuthForm>
+    <div className={styles.Container}>
+      <AuthForm>
+        <img src={logo} alt="Winter" className={styles.logo} />
+        <h1>
+          Welcome to <text>Winter</text>
+        </h1>
+        {isLoading ? (
+          <p>Loading...</p>
+        ) : (
+          <>
+            {!isEmailCorrect ? <p>Incorrect email</p> : null}
+            <Input
+              styleType="Input1"
+              placeholderValue="Enter your email..."
+              type="email"
+              value={email}
+              onChange={handleEmailChange}
+              required
+            />
+            <Input
+              styleType="Input1"
+              placeholderValue="Enter your password..."
+              value={password}
+              type="password"
+              onChange={handlePasswordChange}
+              required
+            />
+
+            <Button styleType="Button1" onClick={handleSubmit} />
+          </>
+        )}
+      </AuthForm>
+    </div>
   );
 }

@@ -4,7 +4,7 @@ import React from "react";
 
 const Button: React.FC<ButtonProps> = ({ value, styleType, onClick }) => {
   const buttonClassName = styleType ? styles[styleType] : styles.Button1;
-  const buttonText = value ? value : "Submit";
+  const buttonText = value ? value : "Log In";
 
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     onClick?.(event);

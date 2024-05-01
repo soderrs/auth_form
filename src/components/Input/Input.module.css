@@ -1,5 +1,4 @@
-/* .Container {
-    position: relative;
+.Container {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -7,15 +6,19 @@
 }
 
 .Input {
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
     border: 1px solid #1f1f1f41;
-    outline: none;
-    background: var(--link-color-active);
-    padding: 8px 12px;
-    color: var(--main-color);
-    border-radius: 4px;
-    font-size: 16px;
-    width: 100%;
-    max-width: 300px;
+    background:  rgb(111, 178, 241);
+    padding: 5px 12px;
+    border-radius: 7px;
+    font-size: 13px;
+    width: 270px;
+    /* max-width: 300px; */
+    margin-top: 15px;
+    height: 40px;
+    font-family: "Inter", sans-serif;
 }
 
 .Label {
@@ -37,4 +40,4 @@
 
 .ActiveInput {
     border: 1px solid #000000;
-} */
+}

@@ -58,46 +58,18 @@ body {
 }
 
 
-.messages {
-    display: flex;
-    justify-content: center;
-}
-
-
-.success {
-    display: block;
-    color: white;
-    width: fit-content;
-    height: 100px;
-    padding: 5px;
-}
-
-
-
-.error {
-    font-size: 12px;
-    color: red;
-    margin-bottom: 10px;
-    margin-left: -20px;
-    align-self: flex-start;
-}
-
-.logo {
-    width: 120px;
-    background-color: aqua;
-    border-radius: 30%;
-
-}
-
-
-.winter {
-    color: rgb(22, 137, 231);
-    font-size: 110%;
-    font-weight: 550;
-}
-
-
-
-
 
  */
+.Container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(135, 195, 252);
+    border-radius: 18px;
+    width: 360px;
+    height: 400px;
+    
+}
+
+
